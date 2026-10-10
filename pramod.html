@@ -1,0 +1,2558 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#0a0f1c">
+  <meta name="description" content="Pramod Kumar Shah is a Senior Product Manager specializing in B2B commerce, supply chain, marketplace platforms, pricing, procurement, and product growth.">
+  <meta name="author" content="Pramod Kumar Shah">
+
+  <title>Pramod Kumar Shah | Senior Product Manager</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0a0f1c;
+      --bg-secondary: #111827;
+      --card: #161f32;
+      --border: #263046;
+      --text: #e5e9f2;
+      --text-dim: #9aa5b8;
+      --accent: #2dd4bf;
+      --accent2: #f5a623;
+      --cta-text: #06202a;
+      --shadow: 0 10px 30px rgba(0, 0, 0, .3);
+      --nav-bg: rgba(10, 15, 28, .92);
+      --radius: 14px;
+    }
+
+    [data-theme="light"] {
+      color-scheme: light;
+      --bg: #fafbfc;
+      --bg-secondary: #fff;
+      --card: #fff;
+      --border: #e5e9f2;
+      --text: #1a1f2e;
+      --text-dim: #5a6478;
+      --accent: #0d9488;
+      --accent2: #b86b00;
+      --cta-text: #fff;
+      --shadow: 0 10px 30px rgba(0, 0, 0, .08);
+      --nav-bg: rgba(250, 251, 252, .94);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      min-width: 320px;
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background .25s, color .25s;
+    }
+
+    body, button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    button, a {
+      touch-action: manipulation;
+    }
+
+    button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    img, svg {
+      max-width: 100%;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 100px 0;
+      scroll-margin-top: 75px;
+    }
+
+    .section-tag {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin-bottom: 16px;
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .section-sub {
+      max-width: 640px;
+      margin-bottom: 40px;
+      color: var(--text-dim);
+      font-size: 17px;
+    }
+
+    /* Navigation */
+
+    nav {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      right: 0;
+      left: 0;
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      min-height: 72px;
+      margin: 0 auto;
+      padding: 12px 24px;
+    }
+
+    .logo {
+      flex-shrink: 0;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links > a:not(.nav-cta) {
+      color: var(--text-dim);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color .2s;
+    }
+
+    .nav-links > a:not(.nav-cta):hover,
+    .nav-links > a.active {
+      color: var(--accent);
+    }
+
+    .nav-links .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: var(--cta-text);
+      font-size: 14px;
+      font-weight: 700;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .nav-links .nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(45, 212, 191, .2);
+    }
+
+    .theme-toggle,
+    .hamburger {
+      display: inline-flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: var(--card);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .theme-toggle {
+      font-size: 15px;
+    }
+
+    .theme-toggle:hover,
+    .hamburger:hover {
+      border-color: var(--accent);
+    }
+
+    .nav-mobile-controls {
+      display: none;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hamburger {
+      font-size: 19px;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      max-height: calc(100dvh - 72px);
+      overflow-y: auto;
+      padding: 12px 24px 20px;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-secondary);
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .mobile-menu a {
+      padding: 10px 8px;
+      border-radius: 8px;
+      color: var(--text-dim);
+      font-weight: 500;
+    }
+
+    .mobile-menu a:hover,
+    .mobile-menu a.active {
+      background: var(--card);
+      color: var(--accent);
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      display: flex;
+      min-height: 100svh;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 120px;
+      padding-bottom: 80px;
+    }
+
+    .hero::before {
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+      content: "";
+      opacity: .08;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      margin-bottom: 24px;
+      padding: 8px 16px;
+      border: 1px solid rgba(45, 212, 191, .3);
+      border-radius: 30px;
+      background: rgba(45, 212, 191, .1);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      margin-bottom: 16px;
+      font-size: clamp(36px, 4.2vw, 52px);
+      font-weight: 800;
+      line-height: 1.15;
+      overflow-wrap: anywhere;
+    }
+
+    .hero-role {
+      margin-bottom: 20px;
+      color: var(--text-dim);
+      font-size: clamp(20px, 2.2vw, 26px);
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .highlight {
+      color: var(--accent);
+    }
+
+    .lead {
+      max-width: 560px;
+      margin-bottom: 32px;
+      color: var(--text-dim);
+      font-size: 18px;
+    }
+
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 13px 24px;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: transform .2s, background .2s, border-color .2s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--cta-text);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(45, 212, 191, .2);
+    }
+
+    .btn-outline {
+      border-color: var(--border);
+      background: transparent;
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .hero-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 22px;
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    .hero-contact a,
+    .hero-contact span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      overflow-wrap: anywhere;
+    }
+
+    .hero-contact a:hover {
+      color: var(--accent);
+    }
+
+    .hero-contact i {
+      color: var(--accent);
+    }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+    }
+
+    .avatar-ring {
+      display: flex;
+      width: 280px;
+      max-width: 100%;
+      aspect-ratio: 1;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+    }
+
+    .avatar-inner {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--bg-secondary);
+      color: var(--accent);
+      font-size: 80px;
+      font-weight: 800;
+    }
+
+    /* Metrics */
+
+    .metrics {
+      padding: 60px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-secondary);
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 28px;
+      text-align: center;
+    }
+
+    .metric-num {
+      color: var(--accent);
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .metric-label {
+      margin-top: 6px;
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      gap: 50px;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+      color: var(--text-dim);
+      font-size: 16px;
+    }
+
+    .about-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .highlight-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--card);
+    }
+
+    .highlight-item > i {
+      margin-top: 3px;
+      color: var(--accent);
+      font-size: 22px;
+    }
+
+    .highlight-item h3 {
+      margin-bottom: 4px;
+      font-size: 15px;
+    }
+
+    .highlight-item p {
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    /* Case studies */
+
+    #work {
+      background: var(--bg-secondary);
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+
+    .filter-btn {
+      padding: 9px 16px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      background: transparent;
+      color: var(--text-dim);
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      transition: color .2s, background .2s, border-color .2s;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: var(--cta-text);
+    }
+
+    .cs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 24px;
+    }
+
+    .cs-card {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--card);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .cs-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .cs-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .cs-card-tag {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 20px;
+      background: rgba(245, 166, 35, .12);
+      color: var(--accent2);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .4px;
+    }
+
+    .cs-company {
+      color: var(--text-dim);
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .cs-card h3 {
+      margin-bottom: 14px;
+      font-size: 20px;
+      line-height: 1.35;
+    }
+
+    .cs-facts {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 18px;
+      padding: 13px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--bg-secondary);
+    }
+
+    .cs-facts strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--accent);
+      font-size: 10px;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+    }
+
+    .cs-facts span {
+      display: block;
+      color: var(--text-dim);
+      font-size: 11px;
+      overflow-wrap: anywhere;
+    }
+
+    .cs-block {
+      margin-bottom: 16px;
+    }
+
+    .cs-block > strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .cs-block p {
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    .cs-list li {
+      position: relative;
+      margin-bottom: 7px;
+      padding-left: 17px;
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    .cs-list li::before {
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      content: "▸";
+    }
+
+    .cs-list li strong {
+      color: var(--text);
+    }
+
+    .cs-impact {
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .cs-impact span {
+      display: inline-block;
+      margin: 3px 4px 3px 0;
+      padding: 6px 10px;
+      border-radius: 8px;
+      background: rgba(45, 212, 191, .1);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* Experience */
+
+    .timeline {
+      position: relative;
+      padding-left: 36px;
+    }
+
+    .timeline::before {
+      position: absolute;
+      top: 8px;
+      bottom: 8px;
+      left: 7px;
+      width: 2px;
+      background: var(--border);
+      content: "";
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 32px;
+    }
+
+    .tl-dot {
+      position: absolute;
+      top: 8px;
+      left: -36px;
+      width: 17px;
+      height: 17px;
+      border: 4px solid var(--bg);
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .tl-card {
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--card);
+    }
+
+    .tl-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .tl-role {
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    .tl-date {
+      height: fit-content;
+      padding: 4px 11px;
+      border-radius: 20px;
+      background: rgba(45, 212, 191, .1);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .tl-company {
+      margin-bottom: 16px;
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    .tl-details li {
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 20px;
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    .tl-details li::before {
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      content: "▸";
+    }
+
+    .tl-details li strong {
+      color: var(--text);
+    }
+
+    .tl-group {
+      margin: 18px 0 10px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .tl-full {
+      display: none;
+    }
+
+    .tl-full.open {
+      display: block;
+    }
+
+    .toggle-details {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+      padding: 8px 0;
+      border: 0;
+      background: transparent;
+      color: var(--accent);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* Skills */
+
+    #skills {
+      background: var(--bg-secondary);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .skill-card {
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--card);
+    }
+
+    .skill-card h3 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      color: var(--accent);
+      font-size: 15px;
+    }
+
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 7px 12px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--bg-secondary);
+      color: var(--text-dim);
+      font-size: 12px;
+    }
+
+    /* Education */
+
+    .edu-card {
+      display: flex;
+      max-width: 700px;
+      align-items: center;
+      gap: 22px;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--card);
+    }
+
+    .edu-icon {
+      display: flex;
+      width: 56px;
+      height: 56px;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: rgba(45, 212, 191, .1);
+      color: var(--accent);
+      font-size: 24px;
+    }
+
+    .edu-card h3 {
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+
+    .edu-card p {
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    /* Contact */
+
+    #contact {
+      background: var(--bg-secondary);
+    }
+
+    .contact-wrap {
+      padding: 54px 32px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--card);
+      text-align: center;
+    }
+
+    .contact-wrap h2 {
+      margin-bottom: 16px;
+      font-size: 34px;
+      line-height: 1.3;
+    }
+
+    .contact-wrap > p {
+      max-width: 520px;
+      margin: 0 auto 32px;
+      color: var(--text-dim);
+    }
+
+    .contact-methods {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .contact-method {
+      display: inline-flex;
+      min-width: 210px;
+      max-width: 100%;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 18px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg-secondary);
+      font-size: 13px;
+      overflow-wrap: anywhere;
+      transition: border-color .2s, transform .2s;
+    }
+
+    .contact-method:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+
+    .contact-method i {
+      flex-shrink: 0;
+      color: var(--accent);
+      font-size: 17px;
+    }
+
+    /* Footer */
+
+    footer {
+      padding: 28px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-dim);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .back-top {
+      position: fixed;
+      z-index: 998;
+      right: 24px;
+      bottom: 24px;
+      display: flex;
+      width: 46px;
+      height: 46px;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--cta-text);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      box-shadow: var(--shadow);
+      transition: opacity .2s, visibility .2s, transform .2s;
+    }
+
+    .back-top.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* Reveal animations */
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+
+    @media (min-width: 901px) {
+      .mobile-menu {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 1050px) {
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links > a:not(.nav-cta) {
+        font-size: 13px;
+      }
+
+      .hero-grid {
+        gap: 36px;
+      }
+
+      .avatar-ring {
+        width: 240px;
+      }
+
+      .cs-card {
+        padding: 22px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      section {
+        padding: 76px 0;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-mobile-controls {
+        display: flex;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 120px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .avatar-ring {
+        width: 170px;
+      }
+
+      .avatar-inner {
+        font-size: 50px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-contact,
+      .hero-btns {
+        justify-content: center;
+      }
+
+      .lead {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .metrics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 18px;
+      }
+
+      .cs-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cs-facts {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 32px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .container {
+        padding: 0 18px;
+      }
+
+      section {
+        padding: 64px 0;
+      }
+
+      .nav-inner {
+        min-height: 66px;
+        padding: 10px 18px;
+      }
+
+      .logo {
+        font-size: 18px;
+      }
+
+      .mobile-menu {
+        max-height: calc(100dvh - 66px);
+        padding-right: 18px;
+        padding-left: 18px;
+      }
+
+      .hero {
+        padding-top: 100px;
+      }
+
+      .hero-tag {
+        margin-bottom: 18px;
+        font-size: 11px;
+      }
+
+      .hero h1 {
+        font-size: 35px;
+      }
+
+      .hero-role {
+        font-size: 21px;
+      }
+
+      .lead {
+        font-size: 15px;
+      }
+
+      .hero-btns {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-contact {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .metrics {
+        padding: 42px 0;
+      }
+
+      .metric-num {
+        font-size: 34px;
+      }
+
+      .metric-label {
+        font-size: 12px;
+      }
+
+      .section-title {
+        font-size: 29px;
+      }
+
+      .section-sub {
+        font-size: 15px;
+      }
+
+      .filters {
+        gap: 8px;
+      }
+
+      .filter-btn {
+        padding: 8px 12px;
+        font-size: 11px;
+      }
+
+      .cs-card,
+      .tl-card,
+      .skill-card {
+        padding: 20px;
+      }
+
+      .cs-facts {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .cs-facts > div {
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .cs-facts > div:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      .timeline {
+        padding-left: 27px;
+      }
+
+      .tl-dot {
+        left: -27px;
+      }
+
+      .tl-role {
+        font-size: 17px;
+      }
+
+      .edu-card {
+        align-items: flex-start;
+        gap: 14px;
+        padding: 20px;
+      }
+
+      .edu-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 19px;
+      }
+
+      .contact-wrap {
+        padding: 36px 18px;
+      }
+
+      .contact-wrap h2 {
+        font-size: 29px;
+      }
+
+      .contact-methods {
+        flex-direction: column;
+      }
+
+      .contact-method {
+        width: 100%;
+        min-width: 0;
+      }
+
+      .back-top {
+        right: 16px;
+        bottom: 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .fade-in {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#home" class="logo" aria-label="Pramod Kumar Shah, home">
+        Pramod<span>.</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Case Studies</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+
+        <button class="theme-toggle" type="button"
+          aria-label="Switch to light theme"
+          title="Toggle color theme">
+          <i class="fa-solid fa-sun" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="nav-mobile-controls">
+        <button class="theme-toggle" type="button"
+          aria-label="Switch to light theme"
+          title="Toggle color theme">
+          <i class="fa-solid fa-sun" aria-hidden="true"></i>
+        </button>
+
+        <button class="hamburger" id="menuToggle" type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#about">About</a>
+      <a href="#work">Case Studies</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="hero-tag">Open to international opportunities</span>
+
+          <h1>Pramod Kumar Shah</h1>
+
+          <p class="hero-role">
+            Senior Product Manager
+            <span class="highlight">|</span>
+            Commerce &amp; Supply Chain
+          </p>
+
+          <p class="lead">
+            I build commerce and supply chain products that solve real
+            problems and move real numbers. 7.5+ years in product
+            management. 11+ years working across operations and technology.
+            I take an idea from rough concept to live product, then make
+            it better.
+          </p>
+
+          <div class="hero-btns">
+            <a href="#work" class="btn btn-primary">
+              <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+              View Case Studies
+            </a>
+
+            <a href="https://drive.google.com/drive/folders/1tDVgtBINtjQqCWenxDxSm1XDIO7Yke9t"
+              target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline">
+              <i class="fa-solid fa-download" aria-hidden="true"></i>
+              Download Resume
+            </a>
+          </div>
+
+          <div class="hero-contact">
+            <a href="mailto:kumarshah.pramod@gmail.com">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              kumarshah.pramod@gmail.com
+            </a>
+
+            <a href="tel:+919582668132">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              +91 9582668132
+            </a>
+
+            <a href="https://www.linkedin.com/in/pramodshah/"
+              target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              LinkedIn
+            </a>
+
+            <span>
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              Delhi, India
+            </span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Pramod Kumar Shah initials">
+          <div class="avatar-ring">
+            <div class="avatar-inner" aria-hidden="true">PS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics -->
+    <section class="metrics" aria-label="Selected career results">
+      <div class="container metrics-grid">
+        <div class="fade-in">
+          <div class="metric-num" data-target="60" data-suffix="%">0%</div>
+          <div class="metric-label">
+            Increase in quote-to-order conversion, key accounts, 2024–25
+          </div>
+        </div>
+
+        <div class="fade-in">
+          <div class="metric-num" data-target="500" data-suffix="+">0+</div>
+          <div class="metric-label">Product features shipped, 2019–2024</div>
+        </div>
+
+        <div class="fade-in">
+          <div class="metric-num" data-target="20" data-suffix="%">0%</div>
+          <div class="metric-label">
+            Retention lift from EngageMax, core categories
+          </div>
+        </div>
+
+        <div class="fade-in">
+          <div class="metric-num" data-target="1.2" data-suffix="M+">0M+</div>
+          <div class="metric-label">SKUs covered by ProcMan automation</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <span class="section-tag">About</span>
+        <h2 class="section-title">I understand the product and the warehouse</h2>
+
+        <div class="about-grid">
+          <div class="about-text fade-in">
+            <p>
+              I started as a mechanical engineer. Then I moved into supply
+              chain operations. Then product management. That path matters.
+              It means I understand how a warehouse runs, not just how a
+              roadmap looks.
+            </p>
+
+            <p>
+              I've spent 7.5+ years owning commerce and supply chain products
+              for marketplaces with millions of buyers and sellers. I've
+              worked across India and Japan teams on fulfillment, pricing,
+              procurement, and user experience.
+            </p>
+
+            <p>
+              My job is simple. Find the real problem. Build the smallest
+              thing that solves it. Ship it fast. I use AI tools to test
+              ideas before writing a single requirement. I use data to
+              decide what to build next, not opinions.
+            </p>
+          </div>
+
+          <div class="about-highlights fade-in">
+            <article class="highlight-item">
+              <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+              <div>
+                <h3>Pricing &amp; Growth</h3>
+                <p>
+                  Built pricing tools and loyalty programs that raised
+                  revenue, retention, and order value.
+                </p>
+              </div>
+            </article>
+
+            <article class="highlight-item">
+              <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+              <div>
+                <h3>Supply Chain &amp; Fulfillment</h3>
+                <p>
+                  Designed warehouse and shipping workflows that cut costs
+                  and sped up delivery.
+                </p>
+              </div>
+            </article>
+
+            <article class="highlight-item">
+              <i class="fa-solid fa-robot" aria-hidden="true"></i>
+              <div>
+                <h3>AI-Driven Prototyping</h3>
+                <p>
+                  Use AI tools to test ideas fast, before writing a single
+                  requirement document.
+                </p>
+              </div>
+            </article>
+
+            <article class="highlight-item">
+              <i class="fa-solid fa-users" aria-hidden="true"></i>
+              <div>
+                <h3>Team Leadership</h3>
+                <p>
+                  Led product managers and cross-functional teams to ship
+                  500+ features.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case studies -->
+    <section id="work">
+      <div class="container">
+        <span class="section-tag">Selected Work</span>
+        <h2 class="section-title">Case studies</h2>
+
+        <p class="section-sub">
+          Six areas of work across SteelBazaar.com and IndustryBuying.com.
+          Each one shows the baseline, who it affected, how long it took,
+          and what changed.
+        </p>
+
+        <div class="filters" role="group" aria-label="Filter case studies">
+          <button class="filter-btn active" type="button"
+            data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button"
+            data-filter="steelbazaar" aria-pressed="false">SteelBazaar</button>
+          <button class="filter-btn" type="button"
+            data-filter="retention" aria-pressed="false">Retention &amp; Lifecycle</button>
+          <button class="filter-btn" type="button"
+            data-filter="pricing" aria-pressed="false">Pricing &amp; Growth</button>
+          <button class="filter-btn" type="button"
+            data-filter="supply" aria-pressed="false">Supply Chain &amp; 3PL</button>
+          <button class="filter-btn" type="button"
+            data-filter="procurement" aria-pressed="false">Procurement &amp; Finance</button>
+          <button class="filter-btn" type="button"
+            data-filter="leadership" aria-pressed="false">AI &amp; Leadership</button>
+        </div>
+
+        <div class="cs-grid" id="caseStudyGrid">
+          <!-- SteelBazaar -->
+          <article class="cs-card fade-in" data-cat="steelbazaar">
+            <div class="cs-meta">
+              <span class="cs-card-tag">B2B Commerce Platform</span>
+              <span class="cs-company">SteelBazaar.com | 2024–2025</span>
+            </div>
+
+            <h3>Faster deals and trusted sellers on SteelBazaar.com</h3>
+
+            <div class="cs-facts">
+              <div>
+                <strong>Baseline</strong>
+                <span>5% repeat visit rate, no structured negotiation flow</span>
+              </div>
+              <div>
+                <strong>Segment</strong>
+                <span>Key enterprise accounts, top 10 brand sellers</span>
+              </div>
+              <div>
+                <strong>Timeframe</strong>
+                <span>6 months post-launch</span>
+              </div>
+            </div>
+
+            <div class="cs-block">
+              <strong>Problem</strong>
+              <p>
+                Buyers couldn't negotiate quotes in one place. Finding a
+                trusted seller took too long. Deals with key accounts
+                moved slowly.
+              </p>
+            </div>
+
+            <div class="cs-block">
+              <strong>What I built</strong>
+              <ul class="cs-list">
+                <li>A real-time negotiation and ordering flow.</li>
+                <li>Storefronts for the top 10 brands.</li>
+                <li>A finished-stock discovery tool, built from scratch.</li>
+              </ul>
+            </div>
+
+            <div class="cs-impact">
+              <span>+60% quote-to-order conversion</span>
+              <span>Repeat visits 5% → 14%</span>
+              <span>+12% retention</span>
+              <span>+30% revenue in 6 months</span>
+            </div>
+          </article>
+
+          <!-- Retention -->
+          <article class="cs-card fade-in" data-cat="retention">
+            <div class="cs-meta">
+              <span class="cs-card-tag">Customer Engagement &amp; Retention</span>
+              <span class="cs-company">IndustryBuying.com | 2019–2024</span>
+            </div>
+
+            <h3>Getting buyers and sellers to come back</h3>
+
+            <div class="cs-facts">
+              <div>
+                <strong>Baseline</strong>
+                <span>Pre-EngageMax engagement and repeat-purchase rate</span>
+              </div>
+              <div>
+                <strong>Segment</strong>
+                <span>Core buyer categories, self-serve sellers</span>
+              </div>
+              <div>
+                <strong>Timeframe</strong>
+                <span>30/60/90-day retention windows</span>
+              </div>
+            </div>
+
+            <div class="cs-block">
+              <strong>Problem</strong>
+              <p>
+                Buyers didn't return. Sellers dropped off halfway through
+                onboarding. Refunds took days and hurt trust.
+              </p>
+            </div>
+
+            <div class="cs-block">
+              <strong>What I built</strong>
+              <ul class="cs-list">
+                <li><strong>EngageMax</strong>, a loyalty engine built on buyer data.</li>
+                <li><strong>IB Coins</strong>, a rewards program for long-term retention.</li>
+                <li>A rebuilt self-serve seller onboarding flow.</li>
+                <li>A faster returns flow that triggers refunds on day one.</li>
+              </ul>
+            </div>
+
+            <div class="cs-impact">
+              <span>+20% engagement</span>
+              <span>+20% repeat sales</span>
+              <span>−10% churn</span>
+              <span>+31% listing completion</span>
+              <span>Refunds in 1 day, not 3</span>
+            </div>
+          </article>
+
+          <!-- Pricing -->
+          <article class="cs-card fade-in" data-cat="pricing">
+            <div class="cs-meta">
+              <span class="cs-card-tag">Pricing, Monetization &amp; Growth</span>
+              <span class="cs-company">IndustryBuying.com | 2019–2024</span>
+            </div>
+
+            <h3>One price doesn't fit every buyer</h3>
+
+            <div class="cs-facts">
+              <div>
+                <strong>Baseline</strong>
+                <span>18% repeat visit rate, flat non-personalized pricing</span>
+              </div>
+              <div>
+                <strong>Segment</strong>
+                <span>Price-sensitive buyers, enterprise bulk accounts</span>
+              </div>
+              <div>
+                <strong>Timeframe</strong>
+                <span>6 months post-launch</span>
+              </div>
+            </div>
+
+            <div class="cs-block">
+              <strong>Problem</strong>
+              <p>
+                Every buyer saw the same price. Price-sensitive buyers
+                left. Large accounts had no reason to buy in bulk.
+              </p>
+            </div>
+
+            <div class="cs-block">
+              <strong>What I built</strong>
+              <ul class="cs-list">
+                <li><strong>MyPrice</strong>, an AI pricing tool that adjusts to each buyer's price sensitivity.</li>
+                <li>Tiered bulk pricing for enterprise accounts.</li>
+                <li>An NPS program with a closed feedback loop.</li>
+              </ul>
+            </div>
+
+            <div class="cs-impact">
+              <span>Repeat visits 18% → 23%</span>
+              <span>+20% average order value</span>
+              <span>+15% NPS</span>
+              <span>+12% conversion</span>
+            </div>
+          </article>
+
+          <!-- Supply chain -->
+          <article class="cs-card fade-in" data-cat="supply">
+            <div class="cs-meta">
+              <span class="cs-card-tag">Supply Chain, 3PL &amp; Network</span>
+              <span class="cs-company">IndustryBuying.com | 2019–2024</span>
+            </div>
+
+            <h3>Cheaper shipping, fewer stockouts, better margins</h3>
+
+            <div class="cs-facts">
+              <div>
+                <strong>Baseline</strong>
+                <span>Pre-automation fulfillment and manual replenishment</span>
+              </div>
+              <div>
+                <strong>Segment</strong>
+                <span>Fragile SKUs, 9% of GMV; 30% of shipment volume</span>
+              </div>
+              <div>
+                <strong>Timeframe</strong>
+                <span>8–12 months per initiative</span>
+              </div>
+            </div>
+
+            <div class="cs-block">
+              <strong>Problem</strong>
+              <p>
+                Fragile products failed delivery. Shipping cost too much
+                per order. Pick locations ran out of stock. Prices
+                ignored what inventory actually cost.
+              </p>
+            </div>
+
+            <div class="cs-block">
+              <strong>What I built</strong>
+              <ul class="cs-list">
+                <li>Pincode-based hyperlocal order routing for fragile SKUs.</li>
+                <li>Grouped-shipment logic to combine orders.</li>
+                <li>Demand-led auto replenishment for pick locations.</li>
+                <li>Lot-level cost pricing on high-margin SKUs.</li>
+              </ul>
+            </div>
+
+            <div class="cs-impact">
+              <span>+20% sales across 9% of GMV</span>
+              <span>−15% shipping cost per order</span>
+              <span>−40% purchase order effort</span>
+              <span>+12% margin</span>
+            </div>
+          </article>
+
+          <!-- Procurement -->
+          <article class="cs-card fade-in" data-cat="procurement">
+            <div class="cs-meta">
+              <span class="cs-card-tag">Procurement, Planning &amp; Finance</span>
+              <span class="cs-company">IndustryBuying.com | 2019–2024</span>
+            </div>
+
+            <h3>Automating how we buy and get paid</h3>
+
+            <div class="cs-facts">
+              <div>
+                <strong>Baseline</strong>
+                <span>Manual vendor planning, 15-day sourcing cycle</span>
+              </div>
+              <div>
+                <strong>Segment</strong>
+                <span>1.2M SKUs; 40% of GMV on COD-risk orders</span>
+              </div>
+              <div>
+                <strong>Timeframe</strong>
+                <span>6–12 months</span>
+              </div>
+            </div>
+
+            <div class="cs-block">
+              <strong>Problem</strong>
+              <p>
+                Vendor planning was manual across 1.2 million SKUs.
+                Cash-on-delivery orders caused returns and payment risk.
+                Sourcing took weeks.
+              </p>
+            </div>
+
+            <div class="cs-block">
+              <strong>What I built</strong>
+              <ul class="cs-list">
+                <li><strong>ProcMan</strong>, an automated vendor planning and procurement tool.</li>
+                <li><strong>PaySecure</strong> with PartPay to cut COD risk.</li>
+                <li>A reverse-auction system for strategic spend.</li>
+                <li>Invoice-level payment adjustments.</li>
+              </ul>
+            </div>
+
+            <div class="cs-impact">
+              <span>−10% procurement cost</span>
+              <span>+20% payment realization</span>
+              <span>Sourcing 15 → 8 days</span>
+              <span>−50% manual tracking</span>
+            </div>
+          </article>
+
+          <!-- AI and leadership -->
+          <article class="cs-card fade-in" data-cat="leadership">
+            <div class="cs-meta">
+              <span class="cs-card-tag">AI, Experimentation &amp; Leadership</span>
+              <span class="cs-company">IndustryBuying.com | 2019–2024</span>
+            </div>
+
+            <h3>Test first, then build, then ship</h3>
+
+            <div class="cs-facts">
+              <div>
+                <strong>Baseline</strong>
+                <span>Feature-first builds without upfront validation</span>
+              </div>
+              <div>
+                <strong>Segment</strong>
+                <span>Cross-functional teams, India and Japan</span>
+              </div>
+              <div>
+                <strong>Timeframe</strong>
+                <span>Ongoing, 2019–2024</span>
+              </div>
+            </div>
+
+            <div class="cs-block">
+              <strong>Problem</strong>
+              <p>
+                Teams built features before testing the idea. Priorities
+                drifted across five teams and two countries.
+              </p>
+            </div>
+
+            <div class="cs-block">
+              <strong>What I did</strong>
+              <ul class="cs-list">
+                <li>Used AI tools to prototype user journeys and find edge cases before development.</li>
+                <li>Prioritized work using RICE, MoSCoW, and JTBD.</li>
+                <li>Connected OMS, WMS, and marketplace systems through ERP-aligned APIs. Validated changes with A/B tests.</li>
+                <li>Led 3 product managers on OKR-based roadmaps. Sent weekly updates to 5 teams.</li>
+              </ul>
+            </div>
+
+            <div class="cs-impact">
+              <span>500+ features shipped</span>
+              <span>3 PMs led</span>
+              <span>5 teams aligned</span>
+            </div>
+          </article>
+        </div>
+
+        <p id="filterStatus" class="section-sub" role="status"
+          aria-live="polite" hidden></p>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="container">
+        <span class="section-tag">Career Journey</span>
+        <h2 class="section-title">Work experience</h2>
+
+        <div class="timeline">
+          <article class="tl-item fade-in">
+            <div class="tl-dot" aria-hidden="true"></div>
+
+            <div class="tl-card">
+              <div class="tl-header">
+                <h3 class="tl-role">Senior Product Manager</h3>
+                <span class="tl-date">Apr 2024 – Jul 2025</span>
+              </div>
+
+              <p class="tl-company">ABA InfoTech Private Limited, Noida</p>
+
+              <ul class="tl-details">
+                <li>
+                  Set product strategy for <strong>steelbazaar.com</strong>.
+                  Owned quoting, inventory discovery, seller trust, and
+                  buyer adoption.
+                </li>
+                <li>
+                  Built a real-time negotiation and ordering flow.
+                  Quote-to-order conversion went up <strong>60%</strong>
+                  for key accounts.
+                </li>
+                <li>
+                  Launched storefronts for the top 10 brands. Repeat
+                  visits went from 5% to 14%. Retention up
+                  <strong>12%</strong>.
+                </li>
+                <li>
+                  Launched a new stock discovery tool from scratch.
+                  Revenue grew <strong>30%</strong> in 6 months.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-item fade-in">
+            <div class="tl-dot" aria-hidden="true"></div>
+
+            <div class="tl-card">
+              <div class="tl-header">
+                <h3 class="tl-role">Senior Product Manager</h3>
+                <span class="tl-date">Jan 2019 – Mar 2024</span>
+              </div>
+
+              <p class="tl-company">
+                IB MonotaRO Private Limited, Gurugram. IndustryBuying.com,
+                a joint venture of MonotaRO Japan and IndiaMart. 2M+
+                products across 38 categories.
+              </p>
+
+              <h4 class="tl-group">Customer Engagement, Retention &amp; Lifecycle</h4>
+              <ul class="tl-details">
+                <li>
+                  Built <strong>EngageMax</strong>, a loyalty engine.
+                  Engagement up 20%, repeat sales up 20%, churn down 10%.
+                </li>
+                <li>
+                  Led <strong>IB Coins</strong>, a rewards program.
+                  30/60/90-day retention up 10 to 12%.
+                </li>
+              </ul>
+
+              <h4 class="tl-group">Pricing, Monetization &amp; Growth</h4>
+              <ul class="tl-details">
+                <li>
+                  Built <strong>MyPrice</strong>, an AI pricing tool.
+                  Repeat visits went from 18% to 23%.
+                </li>
+                <li>
+                  Rolled out bulk pricing for enterprise buyers.
+                  Average order value up 20% in six months.
+                </li>
+              </ul>
+
+              <div class="tl-full" id="exp2-full" hidden>
+                <h4 class="tl-group">Supply Chain, 3PL &amp; Network Platforms</h4>
+                <ul class="tl-details">
+                  <li>
+                    Built pincode-based order routing for fragile products.
+                    Sales up 20% across 9% of GMV.
+                  </li>
+                  <li>
+                    Designed grouped-shipment logic. Shipping cost per
+                    order down 15% on 30% of volume.
+                  </li>
+                  <li>
+                    Automated demand-led replenishment. Cut purchase order
+                    effort by 40%.
+                  </li>
+                </ul>
+
+                <h4 class="tl-group">Procurement, Planning &amp; Finance</h4>
+                <ul class="tl-details">
+                  <li>
+                    Built <strong>ProcMan</strong>, an automated procurement
+                    tool. Cut procurement cost 10% across 1.2 million SKUs.
+                  </li>
+                  <li>
+                    Led <strong>PaySecure</strong> with PartPay. Payment
+                    realization up 20% across 40% of GMV.
+                  </li>
+                  <li>
+                    Built a reverse-auction sourcing system. Cut sourcing
+                    time from 15 days to 8.
+                  </li>
+                </ul>
+
+                <h4 class="tl-group">AI, Experimentation &amp; Leadership</h4>
+                <ul class="tl-details">
+                  <li>
+                    Used AI tools to prototype and test ideas before
+                    development. Validated changes with A/B tests.
+                  </li>
+                  <li>
+                    Led a team of 3 product managers. Delivered 500+
+                    user stories with 5 cross-functional teams.
+                  </li>
+                </ul>
+              </div>
+
+              <button class="toggle-details" type="button"
+                aria-expanded="false" aria-controls="exp2-full">
+                Show more <span aria-hidden="true">↓</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="tl-item fade-in">
+            <div class="tl-dot" aria-hidden="true"></div>
+
+            <div class="tl-card">
+              <div class="tl-header">
+                <h3 class="tl-role">Senior Supply Chain Manager</h3>
+                <span class="tl-date">Jun 2015 – Dec 2018</span>
+              </div>
+
+              <p class="tl-company">IB MonotaRO Private Limited, Gurugram</p>
+
+              <ul class="tl-details">
+                <li>
+                  Built a direct-seller shipping model. Scaled to
+                  ₹3.15 Cr a month with 1-day turnaround.
+                </li>
+                <li>Ran the warehouse management system. Hit 95% inventory accuracy.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-item fade-in">
+            <div class="tl-dot" aria-hidden="true"></div>
+
+            <div class="tl-card">
+              <div class="tl-header">
+                <h3 class="tl-role">Production Engineer</h3>
+                <span class="tl-date">Nov 2014 – May 2015</span>
+              </div>
+
+              <p class="tl-company">ENCO Engineers Combine, Gurugram</p>
+
+              <ul class="tl-details">
+                <li>Learned lean manufacturing and quality improvement on the shop floor.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-item fade-in">
+            <div class="tl-dot" aria-hidden="true"></div>
+
+            <div class="tl-card">
+              <div class="tl-header">
+                <h3 class="tl-role">Mechanical Engineer</h3>
+                <span class="tl-date">Jul 2012 – Jun 2014</span>
+              </div>
+
+              <p class="tl-company">G D Automobile, Delhi</p>
+
+              <ul class="tl-details">
+                <li>
+                  Improved production processes. Cut downtime 12%.
+                  Kept on-time delivery at 95%.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container">
+        <span class="section-tag">Capabilities</span>
+        <h2 class="section-title">Skills &amp; tools</h2>
+
+        <div class="skills-grid">
+          <article class="skill-card fade-in">
+            <h3>
+              <i class="fa-solid fa-gears" aria-hidden="true"></i>
+              Core Skills
+            </h3>
+            <div class="tag-cloud">
+              <span class="tag">Agile / Scrum</span>
+              <span class="tag">Product Strategy</span>
+              <span class="tag">Product-Led Growth</span>
+              <span class="tag">AI-Driven Prototyping</span>
+              <span class="tag">Marketplace Platforms</span>
+              <span class="tag">Pricing &amp; Monetization</span>
+              <span class="tag">OKRs</span>
+              <span class="tag">GTM Strategy</span>
+              <span class="tag">Logistics Tech</span>
+              <span class="tag">Stakeholder Management</span>
+              <span class="tag">Team Management</span>
+              <span class="tag">KPI Tracking</span>
+            </div>
+          </article>
+
+          <article class="skill-card fade-in">
+            <h3>
+              <i class="fa-solid fa-toolbox" aria-hidden="true"></i>
+              Tools I Use
+            </h3>
+            <div class="tag-cloud">
+              <span class="tag">JIRA</span>
+              <span class="tag">Confluence</span>
+              <span class="tag">Notion</span>
+              <span class="tag">Figma</span>
+              <span class="tag">Balsamiq</span>
+              <span class="tag">Draw.io</span>
+              <span class="tag">v0 by Vercel</span>
+              <span class="tag">Lovable</span>
+              <span class="tag">Bolt.new</span>
+              <span class="tag">Replit</span>
+              <span class="tag">Napkin AI</span>
+            </div>
+          </article>
+
+          <article class="skill-card fade-in">
+            <h3>
+              <i class="fa-solid fa-chart-pie" aria-hidden="true"></i>
+              Data &amp; Testing
+            </h3>
+            <div class="tag-cloud">
+              <span class="tag">SQL</span>
+              <span class="tag">Google Analytics 4</span>
+              <span class="tag">Mixpanel</span>
+              <span class="tag">Amplitude</span>
+              <span class="tag">A/B Testing</span>
+              <span class="tag">Postman</span>
+              <span class="tag">MS Excel</span>
+              <span class="tag">UX Audits</span>
+            </div>
+          </article>
+
+          <article class="skill-card fade-in">
+            <h3>
+              <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+              Industries
+            </h3>
+            <div class="tag-cloud">
+              <span class="tag">E-commerce</span>
+              <span class="tag">Supply Chain</span>
+              <span class="tag">Logistics</span>
+              <span class="tag">Procurement</span>
+              <span class="tag">SaaS</span>
+              <span class="tag">Seller Experience</span>
+              <span class="tag">Marketplace Platforms</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <div class="container">
+        <span class="section-tag">Background</span>
+        <h2 class="section-title">Education</h2>
+
+        <article class="edu-card fade-in">
+          <div class="edu-icon" aria-hidden="true">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div>
+            <h3>B.E. in Manufacturing Processes and Automation Engineering</h3>
+            <p>Netaji Subhas Institute of Technology, Delhi. Aug 2008 – Jun 2012</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-wrap fade-in">
+          <h2>Let's talk</h2>
+          <p>
+            I'm open to product leadership roles in commerce, supply chain,
+            and platform products, anywhere in the world. Send a message.
+            I reply fast.
+          </p>
+
+          <div class="contact-methods">
+            <a href="mailto:kumarshah.pramod@gmail.com" class="contact-method">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              kumarshah.pramod@gmail.com
+            </a>
+
+            <a href="tel:+919582668132" class="contact-method">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              +91 9582668132
+            </a>
+
+            <a href="https://www.linkedin.com/in/pramodshah/"
+              target="_blank" rel="noopener noreferrer" class="contact-method">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              LinkedIn
+            </a>
+
+            <a href="https://drive.google.com/drive/folders/1tDVgtBINtjQqCWenxDxSm1XDIO7Yke9t"
+              target="_blank" rel="noopener noreferrer" class="contact-method">
+              <i class="fa-solid fa-download" aria-hidden="true"></i>
+              Download Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="yearNow"></span> Pramod Kumar Shah.
+    Built with precision, like every product I ship.
+  </footer>
+
+  <button class="back-top" id="backTop" type="button"
+    aria-label="Back to top" title="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const root = document.documentElement;
+      const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      );
+
+      const themeButtons = document.querySelectorAll(".theme-toggle");
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const backTop = document.getElementById("backTop");
+      const yearNow = document.getElementById("yearNow");
+
+      yearNow.textContent = new Date().getFullYear();
+
+      /* Theme */
+
+      function getAutoTheme() {
+        const hour = new Date().getHours();
+        return hour >= 6 && hour < 18 ? "light" : "dark";
+      }
+
+      function applyTheme(theme) {
+        const normalizedTheme = theme === "light" ? "light" : "dark";
+
+        root.setAttribute("data-theme", normalizedTheme);
+
+        const isLight = normalizedTheme === "light";
+
+        themeButtons.forEach((button) => {
+          const icon = button.querySelector("i");
+
+          if (icon) {
+            icon.className = isLight
+              ? "fa-solid fa-moon"
+              : "fa-solid fa-sun";
+          }
+
+          button.setAttribute(
+            "aria-label",
+            isLight ? "Switch to dark theme" : "Switch to light theme"
+          );
+
+          button.title = isLight
+            ? "Switch to dark theme"
+            : "Switch to light theme";
+        });
+
+        const themeColor = isLight ? "#fafbfc" : "#0a0f1c";
+        const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+        if (themeMeta) {
+          themeMeta.setAttribute("content", themeColor);
+        }
+      }
+
+      function initializeTheme() {
+        let savedTheme = null;
+
+        try {
+          savedTheme = localStorage.getItem("theme-override");
+        } catch (error) {
+          // Continue with the automatic theme if storage is unavailable.
+        }
+
+        applyTheme(savedTheme || getAutoTheme());
+      }
+
+      function toggleTheme() {
+        const currentTheme = root.getAttribute("data-theme");
+        const nextTheme = currentTheme === "light" ? "dark" : "light";
+
+        applyTheme(nextTheme);
+
+        try {
+          localStorage.setItem("theme-override", nextTheme);
+        } catch (error) {
+          // The selected theme remains active for this page session.
+        }
+      }
+
+      themeButtons.forEach((button) => {
+        button.addEventListener("click", toggleTheme);
+      });
+
+      initializeTheme();
+
+      /* Mobile navigation */
+
+      function setMobileMenu(open) {
+        mobileMenu.classList.toggle("open", open);
+        mobileMenu.hidden = !open;
+
+        menuToggle.setAttribute("aria-expanded", String(open));
+        menuToggle.setAttribute(
+          "aria-label",
+          open ? "Close navigation menu" : "Open navigation menu"
+        );
+
+        const icon = menuToggle.querySelector("i");
+
+        if (icon) {
+          icon.className = open
+            ? "fa-solid fa-xmark"
+            : "fa-solid fa-bars";
+        }
+      }
+
+      menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        setMobileMenu(!isOpen);
+      });
+
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          setMobileMenu(false);
+        });
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          setMobileMenu(false);
+        }
+      });
+
+      document.addEventListener("click", (event) => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+
+        if (
+          isOpen &&
+          !mobileMenu.contains(event.target) &&
+          !menuToggle.contains(event.target)
+        ) {
+          setMobileMenu(false);
+        }
+      });
+
+      const desktopQuery = window.matchMedia("(min-width: 901px)");
+
+      function handleDesktopMenu(event) {
+        if (event.matches) {
+          setMobileMenu(false);
+        }
+      }
+
+      if (desktopQuery.addEventListener) {
+        desktopQuery.addEventListener("change", handleDesktopMenu);
+      } else {
+        desktopQuery.addListener(handleDesktopMenu);
+      }
+
+      /* Experience expansion */
+
+      document.querySelectorAll(".toggle-details").forEach((button) => {
+        button.addEventListener("click", () => {
+          const panelId = button.getAttribute("aria-controls");
+          const panel = document.getElementById(panelId);
+
+          if (!panel) return;
+
+          const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+          button.setAttribute("aria-expanded", String(!isExpanded));
+          panel.hidden = isExpanded;
+          panel.classList.toggle("open", !isExpanded);
+
+          button.innerHTML = isExpanded
+            ? 'Show more <span aria-hidden="true">↓</span>'
+            : 'Show less <span aria-hidden="true">↑</span>';
+        });
+      });
+
+      /* Case study filtering */
+
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const caseCards = document.querySelectorAll(".cs-card");
+      const filterStatus = document.getElementById("filterStatus");
+
+      function filterCaseStudies(category) {
+        let visibleCount = 0;
+
+        caseCards.forEach((card) => {
+          const matches =
+            category === "all" || card.dataset.cat === category;
+
+          card.hidden = !matches;
+
+          if (matches) {
+            visibleCount++;
+          }
+        });
+
+        filterButtons.forEach((button) => {
+          const isActive = button.dataset.filter === category;
+
+          button.classList.toggle("active", isActive);
+          button.setAttribute("aria-pressed", String(isActive));
+        });
+
+        filterStatus.textContent =
+          `${visibleCount} case ${visibleCount === 1 ? "study" : "studies"} shown.`;
+      }
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          filterCaseStudies(button.dataset.filter);
+        });
+      });
+
+      /* Scroll-to-top */
+
+      backTop.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: reducedMotion.matches ? "auto" : "smooth"
+        });
+      });
+
+      /* Scroll effects and active navigation */
+
+      const sections = document.querySelectorAll(
+        "main section[id]"
+      );
+
+      const allNavLinks = document.querySelectorAll(
+        '.nav-links a[href^="#"], .mobile-menu a[href^="#"]'
+      );
+
+      let scrollScheduled = false;
+
+      function updateScrollUI() {
+        backTop.classList.toggle("show", window.scrollY > 400);
+
+        let currentSection = "home";
+
+        sections.forEach((section) => {
+          if (section.getBoundingClientRect().top <= 120) {
+            currentSection = section.id;
+          }
+        });
+
+        allNavLinks.forEach((link) => {
+          const isActive =
+            link.getAttribute("href") === `#${currentSection}`;
+
+          link.classList.toggle("active", isActive);
+
+          if (isActive) {
+            link.setAttribute("aria-current", "location");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        });
+
+        scrollScheduled = false;
+      }
+
+      window.addEventListener("scroll", () => {
+        if (scrollScheduled) return;
+
+        scrollScheduled = true;
+        window.requestAnimationFrame(updateScrollUI);
+      }, { passive: true });
+
+      window.addEventListener("resize", updateScrollUI, { passive: true });
+
+      updateScrollUI();
+
+      /* Reveal effects and metrics */
+
+      function animateCounter(element) {
+        if (element.dataset.animated === "true") return;
+
+        element.dataset.animated = "true";
+
+        const target = Number.parseFloat(element.dataset.target);
+        const suffix = element.dataset.suffix || "";
+
+        if (!Number.isFinite(target)) return;
+
+        if (reducedMotion.matches) {
+          element.textContent = `${target}${suffix}`;
+          return;
+        }
+
+        const duration = 1000;
+        const startTime = performance.now();
+
+        function tick(now) {
+          const progress = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const current = target * eased;
+
+          const formatted = Number.isInteger(target)
+            ? String(Math.round(current))
+            : current.toFixed(1);
+
+          element.textContent = `${formatted}${suffix}`;
+
+          if (progress < 1) {
+            window.requestAnimationFrame(tick);
+          } else {
+            element.textContent = `${target}${suffix}`;
+          }
+        }
+
+        window.requestAnimationFrame(tick);
+      }
+
+      const fadeElements = document.querySelectorAll(".fade-in");
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries, currentObserver) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            entry.target.classList.add("visible");
+
+            const counter = entry.target.querySelector(".metric-num");
+
+            if (counter) {
+              animateCounter(counter);
+            }
+
+            currentObserver.unobserve(entry.target);
+          });
+        }, {
+          threshold: 0.12
+        });
+
+        fadeElements.forEach((element) => observer.observe(element));
+      } else {
+        fadeElements.forEach((element) => {
+          element.classList.add("visible");
+
+          const counter = element.querySelector(".metric-num");
+
+          if (counter) {
+            animateCounter(counter);
+          }
+        });
+      }
+
+      /* Keep animated content readable if motion preferences change. */
+
+      function handleMotionPreferenceChange(event) {
+        if (!event.matches) return;
+
+        fadeElements.forEach((element) => {
+          element.classList.add("visible");
+
+          const counter = element.querySelector(".metric-num");
+
+          if (counter && counter.dataset.animated !== "true") {
+            animateCounter(counter);
+          }
+        });
+      }
+
+      if (reducedMotion.addEventListener) {
+        reducedMotion.addEventListener("change", handleMotionPreferenceChange);
+      } else {
+        reducedMotion.addListener(handleMotionPreferenceChange);
+      }
+    })();
+  </script>
+</body>
+</html>
